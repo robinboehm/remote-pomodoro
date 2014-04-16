@@ -1,0 +1,9 @@
+<form>
+  <input type="text" ng-model="newStartValue" ng-submit="startValue(newStartValue)"/>
+  <button ng-click="startValue(newStartValue)">Set StartValue</button>
+</form>
+
+<span class="timer">{{ currentValue() | date:'mm:ss'}}</span>
+<button class="start" ng-click="start()">Start</button>
+<button class="pause" ng-click="pause()">Pause</button>
+<button class="reset" ng-click="reset()">Reset</button>

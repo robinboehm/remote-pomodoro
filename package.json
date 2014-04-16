@@ -1,0 +1,46 @@
+{
+  "name": "angularjs-styled-directive-module-seed",
+  "version": "0.0.1",
+  "description": "This is an AnguarJS Seed / Blueprint project by the AngularJS-DE Team",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angularjs-de/angularjs-de-seed.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angularjsDE",
+    "seed",
+    "blueprint"
+  ],
+  "author": [
+    "Robin Böhm <robinboehm@googlemail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angularjs-de/angularjs-de-seed/issues"
+  },
+  "homepage": "https://github.com/angularjs-de/angularjs-de-seed",
+  "dependencies": {
+    "karma": "^0.12.3"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-concat": "^2.2.0",
+    "gulp-filter": "~0.3.1",
+    "gulp-grunt": "~0.4.0",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-minify-html": "^0.1.3",
+    "gulp-ng-html2js": "^0.1.6",
+    "gulp-ngmin": "~0.1.2",
+    "gulp-remove-use-strict": "0.0.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-useref": "~0.2.2",
+    "karma-jasmine": "^0.1.5",
+    "karma-ng-html2js-preprocessor": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "angularjs-styled-directive-module-seed",
+  "version": "0.0.1",
+  "homepage": "http://angularjs.de",
+  "authors": [
+    "Robin Böhm <robinboehm@googlemail.com>"
+  ],
+  "description": "This is an AnguarJS Module Seed / Blueprint project by the AngularJS-DE Team",
+  "keywords": [
+    "angularjs",
+    "angularjsDE",
+    "seed",
+    "blueprint",
+    "module"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.16",
+    "jquery": "~2.1.0"
+  }
+}
