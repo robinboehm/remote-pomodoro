@@ -1,9 +1,8 @@
-
+'use strict';
 
 angular.module('angularjsDE-module-seed')
-  .controller('UserCtrl', function ($scope, hoodie, $location) {
+  .controller('HeaderCtrl', function ($scope, hoodie) {
 
-    loco = $location;
     $scope.getUserName = function () {
       return hoodie.account.username;
     };
