@@ -5,20 +5,42 @@
 </head>
 <body>
 
+<header ng-controller="UserCtrl">
+  {{getUserName()}}
+</header>
+
 <main ng-view></main>
+
+
+
 
 <!-- Vendor -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 
+
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 
+<script src="bower_components/hoodie/hoodie.js"></script>
+<script src="bower_components/hoodie-plugin-angularjs/hoodie.angularjs.js"></script>
+
+
+
+<script>
+  // Init Hoodie
+  var hoodie = new Hoodie();
+</script>
+
+<!-- App -->
 <script src="scripts/module.js"></script>
 <script src="scripts/services/timerService.js"></script>
 <script src="scripts/controllers/pomodoroCtrl.js"></script>
+<script src="scripts/controllers/userCtrl.js"></script>
 <script src="scripts/directives/pomodoroTimer.js"></script>
 <script src="scripts/config/routesConfig.js"></script>
 <script src="scripts/config/hoodieConfig.js"></script>
+
+<script src="scripts/run/runLogin.js"></script>
 
 
 </body>

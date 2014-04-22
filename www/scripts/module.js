@@ -1,3 +1,3 @@
 'use strict';
-angular.module('angularjsDE-module-seed', ['ngRoute']);
+angular.module('angularjsDE-module-seed', ['ngRoute', 'hoodie']);
 
