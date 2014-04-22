@@ -2,20 +2,12 @@
 
 
 angular.module('angularjsDE-module-seed')
-  .controller('PomodoroCtrl', function ($scope, $routeParams) {
+  .controller('PomodoroCtrl', function ($scope, $routeParams, hoodie) {
 
     $scope.id = $routeParams.id;
 
-    $scope.handleOnStart = function () {
-      console.log('start');
-    };
-
-    $scope.handleOnPause = function () {
-      console.log('stop');
-    };
-
-    $scope.handleOnNewStartValue = function (newStartValue) {
-      console.log('new Value:' + newStartValue);
-    };
-
+    hoodie.store.findOrAdd('pomodoro', $routeParams.id, {ts: undefined})
+      .then(function (e) {
+        $scope.pomodoro = e;
+      });
   });
