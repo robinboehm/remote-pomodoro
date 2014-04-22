@@ -8,11 +8,10 @@ angular.module('angularjsDE-module-seed')
       currentValue = 0,
       stopPromise;
 
-
     function start() {
       if (angular.isUndefined(stopPromise)) {
         if (currentValue <= 0 || angular.isUndefined(currentValue)) {
-          currentValue = config.startValue;
+          currentValue = startValue;
         }
         stopPromise = $interval(function () {
           if (currentValue <= delta) {

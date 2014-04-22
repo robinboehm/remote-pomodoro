@@ -14,15 +14,18 @@ angular.module('angularjsDE-module-seed')
       link: function (scope) {
         scope.start = function () {
           timerService.start();
-          console.log(scope.onStart);
+          scope.onStart();
         };
         scope.pause = function () {
           timerService.pause();
+          scope.onPause();
         };
         scope.reset = function () {
           timerService.reset();
+          scope.onReset();
         };
         scope.startValue = function (newStartValue) {
+          scope.onNewStartValue({newStartValue: newStartValue});
           return timerService.startValue(newStartValue);
         };
 
@@ -30,8 +33,6 @@ angular.module('angularjsDE-module-seed')
 
         // Init Current values
         scope.newStartValue = timerService.startValue();
-
-
       }
     };
   });
