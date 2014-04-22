@@ -30,7 +30,6 @@
     "hoodie-plugin-angularjs": "0.0.10",
     "hoodie-plugin-appconfig": "~0.1.0",
     "hoodie-plugin-email": "~0.1.1",
-    "hoodie-plugin-global-share": "^2.0.0",
     "hoodie-plugin-users": "0.1.0",
     "hoodie-server": "0.9.19"
   },
@@ -57,7 +56,7 @@
       "hoodie-plugin-appconfig",
       "hoodie-plugin-email",
       "hoodie-plugin-users",
-      "hoodie-plugin-global-share"
+      "hoodie-plugin-angularjs"
     ]
   }
 }
