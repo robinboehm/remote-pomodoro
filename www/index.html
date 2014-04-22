@@ -18,19 +18,47 @@
       </button>
       <a class="navbar-brand" href="#">Remote Pomodoro</a>
     </div>
-    <span ng-if="getUserName()" class="navbar-right navbar-text">
-      Hallo <strong>{{getUserName()}}!</strong>
-    </span>
-    <div ng-if="!getUserName()" class="navbar-collapse collapse">
-      <form class="navbar-form navbar-right" role="form">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form>
+
+    <!-- Account-Foo -->
+    <div class="collapse navbar-collapse" id="navbar">
+      <div ng-controller="AccountCtrl">
+        <form class="navbar-form navbar-right"
+              role="form"
+              ng-controller="SigninCtrl"
+              ng-submit="signIn(email, password)"
+              ng-hide="account.username">
+          <div class="form-group">
+            <label class="sr-only" for="signin-email">E-Mail-Adresse</label>
+            <input type="email" class="form-control" placeholder="E-Mail-Adresse" required ng-model="email">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="signin-password">Passwort</label>
+            <input type="password" class="form-control" placeholder="Passwort" required ng-model="password">
+          </div>
+          <div class="btn-group">
+            <button type="submit" class="btn btn-default">Anmelden</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a ng-click="openRegistration()">Registrieren</a></li>
+              <li><a href="#/account/resetPassword">Passwort vergessen</a></li>
+            </ul>
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right"
+            ng-controller="SigninCtrl"
+            ng-show="account.username">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Angemeldet als {{account.username}}! <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a ng-click="openChangePassword()">Passwort ändern</a></li>
+              <li><a ng-click="signOut()" href="#">Abmelden</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
     <!--/.navbar-collapse -->
   </div>
@@ -47,6 +75,7 @@
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
 <script src="/_api/_files/hoodie.js"></script>
 
@@ -60,6 +89,10 @@
 <script src="scripts/module.js"></script>
 <script src="scripts/controllers/pomodoroCtrl.js"></script>
 <script src="scripts/controllers/headerCtrl.js"></script>
+<script src="scripts/controllers/accountCtrl.js"></script>
+<script src="scripts/controllers/changePassword.js"></script>
+<script src="scripts/controllers/registerAccount.js"></script>
+<script src="scripts/controllers/signIn.js"></script>
 <script src="scripts/directives/pomodoroTimer.js"></script>
 <script src="scripts/config/routesConfig.js"></script>
 <script src="scripts/config/hoodieConfig.js"></script>
