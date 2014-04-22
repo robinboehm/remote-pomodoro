@@ -2,5 +2,7 @@
 *.iml
 
 dist
+www
 bower_components
 node_modules
+data
