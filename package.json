@@ -1,10 +1,13 @@
 {
   "name": "angularjs-styled-directive-module-seed",
   "version": "0.0.1",
+  "type": "app",
   "description": "This is an AnguarJS Seed / Blueprint project by the AngularJS-DE Team",
   "scripts": {
+    "start": "node node_modules/hoodie-server/bin/start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "subdomain": "hoodie-remote-pomodoro",
   "repository": {
     "type": "git",
     "url": "git://github.com/angularjs-de/angularjs-de-seed.git"
@@ -24,7 +27,11 @@
   },
   "homepage": "https://github.com/angularjs-de/angularjs-de-seed",
   "dependencies": {
-    "karma": "^0.12.3"
+    "hoodie-plugin-angularjs": "0.0.10",
+    "hoodie-plugin-appconfig": "~0.1.0",
+    "hoodie-plugin-email": "~0.1.1",
+    "hoodie-plugin-users": "0.1.0",
+    "hoodie-server": "0.9.19"
   },
   "devDependencies": {
     "gulp": "~3.5.0",
@@ -39,8 +46,17 @@
     "gulp-remove-use-strict": "0.0.2",
     "gulp-uglify": "~0.2.1",
     "gulp-useref": "~0.2.2",
+    "karma": "^0.12.3",
     "karma-jasmine": "^0.1.5",
     "karma-ng-html2js-preprocessor": "^0.1.0",
     "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "hoodie": {
+    "plugins": [
+      "hoodie-plugin-appconfig",
+      "hoodie-plugin-email",
+      "hoodie-plugin-users",
+      "hoodie-plugin-angularjs"
+    ]
   }
 }
