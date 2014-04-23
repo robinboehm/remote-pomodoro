@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/angularjs-de/angularjs-de-seed",
   "dependencies": {
-    "hoodie-plugin-angularjs": "0.0.10",
+    "hoodie-plugin-angularjs": "~0.0.15",
     "hoodie-plugin-appconfig": "~0.1.0",
     "hoodie-plugin-email": "~0.1.1",
     "hoodie-plugin-global-share": "^2.0.0",
